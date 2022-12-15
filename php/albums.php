@@ -1,5 +1,5 @@
-<?php require ('header.html') ?>
-<?php require ('curl_init.php') ?>
+<?php require('../html/header.html')?>
+<?php require ('../curl/curl_albums.php') ?>
 <main>
 <?php
 foreach($resultat['records'] as $valeur){
@@ -14,4 +14,4 @@ foreach($resultat['records'] as $valeur){
 }
 ?>
 </main>
-<?php require ('footer.html')?>
+<?php require('../html/footer.html')?>

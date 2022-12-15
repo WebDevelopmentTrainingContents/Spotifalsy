@@ -1,5 +1,5 @@
-<?php require('header.html')?>
-<?php require ('curl_init.php') ?>
+<?php require('../html/header.html')?>
+<?php require ('../curl/curl_albums.php') ?>
 <?php
 $albumId = $_GET['id'];
 foreach($resultat['records'] as $valeur){
@@ -10,7 +10,7 @@ foreach($resultat['records'] as $valeur){
         $prix = $valeur['fields']['Price'];
         $img = $valeur['fields']['Cover'];
         $date = $valeur['fields']['Date'];
-        $stock = $valeur['fields']['Stock'];
+        $genre = $valeur['fields']['Category'];
         $id = $valeur['id'];
         echo "<div class='albumPage'>
 
@@ -18,11 +18,11 @@ foreach($resultat['records'] as $valeur){
         <img src=$img>
         <h3>Album : $album</h3>
         <h3>Artiste : $artiste</h3>
+        <h3>Genre : $genre</h3>
         <p>Date de sortie : $date</p>
         <a href='updateAlbum.php?id=${id}'>Modifier l'album</a>
         </div>";
     };
 }
 ?>
-<?php curl_close($curl); ?>
-<?php require ('footer.html')?>
+<?php require('../html/footer.html')?>

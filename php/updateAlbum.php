@@ -1,4 +1,4 @@
-<?php require ('header.html')?>
+<?php require('../html/header.html')?>
 
 <form id="formUpdateAlbum">
     <div id="form">
@@ -23,9 +23,9 @@
         <label class="linkBuy">Lien vers site de vente :
             <input class="LinkBuy" type="text" name="LinkBuy">
         </label>
-       <button class="btnUpdate" type="submit">Modifier l'album</button>
+       <button class="btnUpdate" type="submit" onclick="window.location.href = 'index.php'">Modifier l'album</button>
 
     </div>
 
 </form>
-<?php require ('footer.html')?>
+<?php require('../html/footer.html')?>
